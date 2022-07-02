@@ -62,12 +62,12 @@ input {
 #songs {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px;
 }
 
 .song-item {
     background-color: #F2F2F2;
-    margin: 15px;
+    margin: 10px;
     padding: 15px;
 }
 
