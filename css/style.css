@@ -1,0 +1,129 @@
+body {
+    background-color: #D9D9D9;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+label {
+    display: block;
+}
+
+h3 {
+    margin: .3em;
+}
+
+.form {
+    margin: 15px;
+    width: 90%;
+}
+
+input {
+    padding: 8px;
+    display: block;
+    width: -webkit-fill-available;
+}
+
+.form-group {
+    margin: 0.3em;
+}
+
+.form button {
+    background-color: #4472C4;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.separator {
+    background-color: #595959;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.song-list {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#songs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song-item {
+    background-color: #F2F2F2;
+    margin: 15px;
+    padding: 15px;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-title {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.artist {
+    color: #595959;
+    font-size: 14px;
+}
+
+.like-count {
+    font-size: 22px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.action-buttons button {
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+}
+
+.remove-song {
+    background-color: #C00000;
+
+}
+
+.add-like {
+    background-color: #4472C4;
+}
+
+.list-item {
+    background-color: antiquewhite;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/*
+@media only screen and (orientation: landscape) {
+    .form {
+        width: 500px;
+    }
+} */
