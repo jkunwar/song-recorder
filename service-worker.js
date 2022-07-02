@@ -13,7 +13,7 @@ self.addEventListener('install', (event) => {
                 '/song-recorder/js/main.js',
                 '/song-recorder/manifest.json',
                 '/song-recorder/icons/favicon-196.png',
-                '/song-recorder/images/tick.png',
+                '/song-recorder/images/music-note.png',
             ])
         })
     );
