@@ -28,17 +28,17 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
 
     // STALE WHILE REVALIDATE
-    // event.respondWith(
-    //     caches.open(CACHE_NAME).then((cache) => {
-    //         return cache.match(event.request).then(cachedResponse => {
-    //             const fetchedResponse = fetch(event.request).then(networkResponse => {
-    //                 cache.put(event.request, networkResponse)
-    //                 return networkResponse
-    //             })
-    //             return cachedResponse || fetchedResponse
-    //         })
-    //     })
-    // )
+    event.respondWith(
+        caches.open(CACHE_NAME).then((cache) => {
+            return cache.match(event.request).then(cachedResponse => {
+                const fetchedResponse = fetch(event.request).then(networkResponse => {
+                    cache.put(event.request, networkResponse.clone())
+                    return networkResponse
+                })
+                return cachedResponse || fetchedResponse
+            })
+        })
+    )
 });
 
 self.addEventListener('synce', event => {
