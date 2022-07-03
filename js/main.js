@@ -25,7 +25,10 @@ function handleAddSong() {
 
     song.add(songTitle, artist)
         .then((docRef) => appendSong({ id: docRef.id, songTitle: songTitle, artist: artist, likeCount: 0 }))
-        .catch((error) => console.error("Error adding document: ", error));
+        .catch((error) => {
+            console.error("Error adding document: ", error)
+            alert("Could not add song. Please check your internet connection!")
+        });
 
 }
 
@@ -35,6 +38,7 @@ async function getAllSongs() {
         snapshots.forEach(song => appendSong(song));
     } catch (error) {
         console.log('Error: ', error)
+        alert("Could not load song. Please check your internet connection!")
     }
 }
 
@@ -58,7 +62,10 @@ function appendActionButtons(element, item) {
     removeBtn.addEventListener('click', () => {
         song.remove(item)
             .then(() => element.remove())
-            .catch(err => console.error(err))
+            .catch(err => {
+                console.error(err)
+                alert("Could not remove song. Please check your internet connection!")
+            })
     })
     actionButtons.appendChild(removeBtn);
 
@@ -71,7 +78,10 @@ function appendActionButtons(element, item) {
                 element.innerHTML = getSongListInnerHTML(res);
                 appendActionButtons(element, res)
             })
-            .catch(err => console.error(err))
+            .catch(err => {
+                console.error(err)
+                alert("Could not like song. Please check your internet connection!")
+            })
 
     })
     actionButtons.appendChild(likeBtn);
