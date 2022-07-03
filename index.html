@@ -82,39 +82,24 @@
         <div class="form">
             <h3>New Song</h3>
             <div class="form-group">
-                <label for="songNane">Title</label>
-                <input id="songName" type="text" name="song_name" placeholder="Song Title">
+                <label for="songTitle">Title</label>
+                <input id="songTitle" type="text" name="song_name" placeholder="Song Title">
             </div>
             <div class="form-group">
                 <label for="artist">Artist</label>
                 <input id="artist" type="text" name="artist" placeholder="Artist Name">
             </div>
             <div class="form-group">
-                <button type="button" onclick="handleAddClick(event)">Add Song</button>
+                <button type="button" id="addSong">Add Song</button>
             </div>
         </div>
         <div class="song-list">
             <span class="separator">List Of Songs</span>
-            <ul id="songs">
-                <li class="song-item" id="1234">
-                    <div class="song-details">
-                        <div class="song-info">
-                            <p class="song-title">Falling in love</p>
-                            <span class="artist">Cellion Dion</span>
-                        </div>
-                        <div class="likes">
-                            Likes: <span class="like-count">7</span>
-                        </div>
-                    </div>
-                    <div class="action-buttons">
-                        <button class="remove-song" onclick="handleRemoveSong(event)" id="1234">Remove</button>
-                        <button class="add-like" onclick="handleAddLike(event)" id="1234">+1 Like</button>
-                    </div>
-                </li>
-            </ul>
+            <ul id="songs"></ul>
         </div>
     </div>
-    <script src="js/main.js"></script>
+
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
